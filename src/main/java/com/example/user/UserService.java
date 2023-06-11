@@ -1,5 +1,8 @@
 package com.example.user;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class UserService {
     private UserRepository userRepository;
 
@@ -13,6 +16,12 @@ public class UserService {
             return user.getAge() > 18;
         }
         return false;
+    }
+    public List<User> findUsersOlderThan18(){
+        List<User> users = userRepository.findAll();
+        return users.stream().
+                filter(user -> user.getAge() > 18)
+                .collect(Collectors.toList());
     }
 }
 

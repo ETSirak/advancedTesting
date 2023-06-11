@@ -23,4 +23,8 @@ import java.util.List;
             }
             return null;
         }
-}
+
+        public List<User> findAll() {
+            return new ArrayList<>(users);
+        }
+    }
