@@ -12,13 +12,13 @@ public class MainTest {
         UserService userService = new UserService(userRepository);
 
         // Test if user is added to the repository
-        userRepository.addUser(new User("Alice", 20));
-        userRepository.addUser(new User("Bob", 17));
+        userRepository.addUser(new User("Erki", 20));
+        userRepository.addUser(new User("Tonis", 17));
 
         // Test if user is older or younger than 18
-        System.out.println("Is Alice older than 18? " + userService.isUserOlderThan18("Alice")); //true
-        System.out.println("Is Bob older than 18? " + userService.isUserOlderThan18("Bob")); //false
-        System.out.println("Is Charlie older than 18? " + userService.isUserOlderThan18("Charlie")); //false (no user)
+        System.out.println("Erki older 18? " + userService.isUserOlderThan18("Erki")); //true
+        System.out.println("Tonis older than 18? " + userService.isUserOlderThan18("Tonis")); //false
+        System.out.println("Is Miki mouse older than 18? " + userService.isUserOlderThan18("miki mouse")); //false (no user)
     }
 }
 
